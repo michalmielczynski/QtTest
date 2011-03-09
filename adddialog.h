@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QString>
 
+//komentarz
 namespace Ui {
     class AddDialog;
 }
