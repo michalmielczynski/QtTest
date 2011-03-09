@@ -1,6 +1,8 @@
 #include "tablewidget.h"
 #include <QtGui>
 
+
+/// @note zmiana
 TableWidget::TableWidget(QWidget *parent): QWidget(parent)
 {
 
