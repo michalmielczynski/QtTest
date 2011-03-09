@@ -5,6 +5,7 @@
 #include "tablewidget.h"
 #include "adddialog.h"
 
+
 class QPlainTextEdit;
 
 
