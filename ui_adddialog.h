@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'adddialog.ui'
 **
-** Created: Wed Mar 9 12:33:11 2011
+** Created: Wed 9. Mar 18:50:04 2011
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -29,13 +29,13 @@ QT_BEGIN_NAMESPACE
 class Ui_AddDialog
 {
 public:
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QLineEdit *lineEdit;
     QPlainTextEdit *plainTextEdit;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *pushButton_2;
     QPushButton *pushButton;
@@ -45,20 +45,20 @@ public:
         if (AddDialog->objectName().isEmpty())
             AddDialog->setObjectName(QString::fromUtf8("AddDialog"));
         AddDialog->resize(321, 285);
-        widget = new QWidget(AddDialog);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(30, 20, 258, 222));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(AddDialog);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(30, 20, 258, 222));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
 
         horizontalLayout->addWidget(label);
 
-        lineEdit = new QLineEdit(widget);
+        lineEdit = new QLineEdit(layoutWidget);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
 
         horizontalLayout->addWidget(lineEdit);
@@ -66,29 +66,31 @@ public:
 
         verticalLayout->addLayout(horizontalLayout);
 
-        plainTextEdit = new QPlainTextEdit(widget);
+        plainTextEdit = new QPlainTextEdit(layoutWidget);
         plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
 
         verticalLayout->addWidget(plainTextEdit);
 
-        widget1 = new QWidget(AddDialog);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(40, 240, 241, 41));
-        horizontalLayout_2 = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(AddDialog);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(40, 240, 241, 41));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        pushButton_2 = new QPushButton(widget1);
+        pushButton_2 = new QPushButton(layoutWidget1);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
 
         horizontalLayout_2->addWidget(pushButton_2);
 
-        pushButton = new QPushButton(widget1);
+        pushButton = new QPushButton(layoutWidget1);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
         horizontalLayout_2->addWidget(pushButton);
 
 
         retranslateUi(AddDialog);
+        QObject::connect(pushButton, SIGNAL(clicked()), AddDialog, SLOT(accept()));
+        QObject::connect(pushButton_2, SIGNAL(clicked()), AddDialog, SLOT(reject()));
 
         QMetaObject::connectSlotsByName(AddDialog);
     } // setupUi

@@ -92,10 +92,20 @@ void MainWindow::importContacts(){
 
 void MainWindow::addContact(){
     addDialog = new AddDialog;
-//    addDialog->show();
-    addDialog->exec();
-    QString test = addDialog->labelData();
-    qDebug() << test;
+    if(addDialog->exec()==QDialog::Accepted){
 
-} ///@todo
-void MainWindow::editContact(){}///@todo
+	QString name = addDialog->labelData();
+	QString address = addDialog->plainTextData();
+	if(name.count()>0  && address.count()>0){
+	    QStringList  helperList;
+	    helperList<< name << address;
+	    table->insert(helperList);
+	}
+	else{
+	    QMessageBox::warning(this,"Nipowodzenie","Nie wype³niono wszystkich pól");
+	}
+    }
+
+
+}
+void MainWindow::editContact(){}/// @todo

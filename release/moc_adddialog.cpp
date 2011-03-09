@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'adddialog.h'
 **
-** Created: Wed 9. Mar 16:02:18 2011
+** Created: Wed 9. Mar 18:50:17 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!

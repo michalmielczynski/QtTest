@@ -18,6 +18,10 @@ public:
     ~AddDialog();
 
     QString labelData();
+    QString plainTextData();
+private slots:
+
+
 private:
     Ui::AddDialog *ui;
 

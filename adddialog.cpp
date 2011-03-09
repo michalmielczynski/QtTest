@@ -1,5 +1,6 @@
 #include "adddialog.h"
 #include "ui_adddialog.h"
+#include <QtGui>
 
 AddDialog::AddDialog(QWidget *parent) :
     QDialog(parent),
@@ -15,5 +16,11 @@ AddDialog::~AddDialog()
 }
 
 QString AddDialog::labelData(){
-    return ui->label->text();
+    return ui->lineEdit->text();
 }
+
+QString AddDialog::plainTextData(){
+    return ui->plainTextEdit->toPlainText();
+}
+
+
