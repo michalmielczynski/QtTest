@@ -93,6 +93,7 @@ void MainWindow::importContacts(){
 void MainWindow::addContact(){
     addDialog = new AddDialog;
 //    addDialog->show();
+    /// @todo implement proper dialog behaviour (check examples)
     addDialog->exec();
     QString test = addDialog->labelData();
     qDebug() << test;
