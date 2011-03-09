@@ -3,6 +3,10 @@
 
 #include <QtGui>
 
+
+/**
+  Class inherites from QWidget
+  **/
 class TableWidget : public QWidget
 {
     Q_OBJECT
