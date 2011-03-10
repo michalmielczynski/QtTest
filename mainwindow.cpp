@@ -92,11 +92,28 @@ void MainWindow::importContacts(){
 
 void MainWindow::addContact(){
     addDialog = new AddDialog;
+<<<<<<< HEAD
 //    addDialog->show();
     /// @todo implement proper dialog behaviour (check examples)
     addDialog->exec();
     QString test = addDialog->labelData();
     qDebug() << test;
+=======
+    if(addDialog->exec()==QDialog::Accepted){
 
-} ///@todo
-void MainWindow::editContact(){}///@todo
+	QString name = addDialog->labelData();
+	QString address = addDialog->plainTextData();
+	if(name.count()>0  && address.count()>0){
+	    QStringList  helperList;
+	    helperList<< name << address;
+	    table->insert(helperList);
+	}
+	else{
+	    QMessageBox::warning(this,"Nipowodzenie","Nie wype³niono wszystkich pól");
+	}
+    }
+
+>>>>>>> e3c9a4c7975896dea781b1b20b751894809b1f8f
+
+}
+void MainWindow::editContact(){}/// @todo

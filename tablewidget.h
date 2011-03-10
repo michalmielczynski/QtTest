@@ -3,7 +3,7 @@
 
 #include <QtGui>
 
-
+//koment
 /**
   Class inherites from QWidget
   **/

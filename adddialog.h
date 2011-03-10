@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QString>
 
+
 namespace Ui {
     class AddDialog;
 }
@@ -17,6 +18,10 @@ public:
     ~AddDialog();
 
     QString labelData();
+    QString plainTextData();
+private slots:
+
+
 private:
     Ui::AddDialog *ui;
 
