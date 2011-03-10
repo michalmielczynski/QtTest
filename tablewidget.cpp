@@ -2,7 +2,8 @@
 #include <QtGui>
 
 
-/// @note zmiana
+
+
 TableWidget::TableWidget(QWidget *parent): QWidget(parent)
 {
 
@@ -10,9 +11,10 @@ TableWidget::TableWidget(QWidget *parent): QWidget(parent)
     table = new QTableView;
     query = new QLineEdit;
     label = new QLabel("find");
+    delegateItem = new DelegateCB(this);
 
-    model = new QStandardItemModel(this);
-    model->setHorizontalHeaderLabels(QStringList()<<"name"<<"address");
+    model = new QStandardItemModel(0,3,this);
+    model->setHorizontalHeaderLabels(QStringList()<<"name"<<"address"<<"select");
 
     QHBoxLayout *horizontalLayout = new QHBoxLayout;
     horizontalLayout->addWidget(label);
@@ -22,8 +24,13 @@ TableWidget::TableWidget(QWidget *parent): QWidget(parent)
     a->addLayout(horizontalLayout);
     a->addWidget(table);
     setLayout(a);
-
     table->setModel(model);
+    table->setColumnWidth(0,200);
+    table->setColumnWidth(1,500);
+    table->setColumnWidth(2,50);
+    table->setItemDelegateForColumn(2,delegateItem);
+
+
     connect(query,SIGNAL(textChanged(QString)),this,SLOT(showLike(QString)));
 
 }
@@ -86,21 +93,54 @@ void TableWidget::insertAllContacts(QMap<QString,QString> map){
 }
 
 void TableWidget::showLike(QString findText){///@todo
-    model->clear();
-    QList<QStandardItem*> items;
-    QString exp = "^[";
-    exp+=findText;
-    exp+="]*";
-    QRegExp reg(exp);
+    if(findText.count()>0)
+    {
+	model->removeRows(0,model->rowCount());
 
-    qDebug()<<exp;
 
-    QMap<QString,QString>::iterator i = contacts.begin();
-    while(i!=contacts.end()){
-         qDebug()<<reg.indexIn(i.key());
-         qDebug()<<i.key();
-         i++;
+	QString exp = "%1.*";
+	QRegExp reg(exp.arg(findText));
+	qDebug()<<exp.arg(findText);
+
+
+	QMap<QString,QString>::iterator i = contacts.begin();
+
+	while(i!=contacts.end()){
+	     if(reg.indexIn(i.key())>=0)
+	     {
+		 QList<QStandardItem*> items;
+		 items.append(new QStandardItem(i.key()));
+		 items.append(new QStandardItem(i.value()));
+		 model->appendRow(items);
+	     }
+	     i++;
+	}
+
+
     }
+    else
+    {
+	model->removeRows(0,model->rowCount());
 
-     model->appendRow(items);
+	QMap<QString,QString>::iterator i = contacts.begin();
+
+	while(i!=contacts.end()){
+		 QList<QStandardItem*> items;
+		 items.append(new QStandardItem(i.key()));
+		 items.append(new QStandardItem(i.value()));
+		 model->appendRow(items);
+		 i++;
+	     }
+
+
+    }
+}
+
+int TableWidget::getFocusItem()
+{
+
+}
+
+void TableWidget::deleteItem(){
+
 }

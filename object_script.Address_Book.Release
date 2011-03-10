@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\tablewidget.o
+./release\adddialog.o
+./release\checkboxdelegate.o
+./release\checkboxdelegate.o
+./release\moc_mainwindow.o
+./release\moc_tablewidget.o
+./release\moc_adddialog.o
+./release\moc_checkboxdelegate.o
+);
