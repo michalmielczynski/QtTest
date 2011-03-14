@@ -1,13 +1,13 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Wed 9. Mar 18:50:14 2011
+** Created: Thu 10. Mar 13:15:27 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../mainwindow.h"
+#include "../../DocksProject/mainwindow.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'mainwindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 62
@@ -23,26 +23,18 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       0,    0, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
- // slots: signature, parameters, type, tag, flags
-      12,   11,   11,   11, 0x08,
-      19,   11,   11,   11, 0x08,
-      26,   11,   11,   11, 0x08,
-      43,   11,   11,   11, 0x08,
-      56,   11,   11,   11, 0x08,
-
        0        // eod
 };
 
 static const char qt_meta_stringdata_MainWindow[] = {
-    "MainWindow\0\0save()\0open()\0importContacts()\0"
-    "addContact()\0editContact()\0"
+    "MainWindow\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -72,17 +64,6 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        switch (_id) {
-        case 0: save(); break;
-        case 1: open(); break;
-        case 2: importContacts(); break;
-        case 3: addContact(); break;
-        case 4: editContact(); break;
-        default: ;
-        }
-        _id -= 5;
-    }
     return _id;
 }
 QT_END_MOC_NAMESPACE

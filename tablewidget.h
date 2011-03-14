@@ -2,6 +2,7 @@
 #define TABLEWIDGET_H
 
 #include <QtGui>
+#include "delegatecb.h"
 
 //koment
 /**
@@ -24,6 +25,8 @@ public slots:
     void clearContacts();
     void insertAllContacts(QMap<QString,QString> map);
     void showLike(QString findText);
+    int getFocusItem();
+    void deleteItem();
 
 private:
     QMap<QString,QString> contacts;
@@ -31,6 +34,8 @@ private:
     QLineEdit *query;
     QLabel *label;
     QStandardItemModel *model;
+    DelegateCB *delegateItem;
+
 
 
 

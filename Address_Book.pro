@@ -13,11 +13,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     tablewidget.cpp \
-    adddialog.cpp
+    adddialog.cpp \
+    delegatecb.cpp
 
 HEADERS  += mainwindow.h \
     tablewidget.h \
-    adddialog.h
+    adddialog.h \
+    delegatecb.h
 
 FORMS    += mainwindow.ui \
     adddialog.ui

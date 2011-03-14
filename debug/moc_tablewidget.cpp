@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'tablewidget.h'
 **
-** Created: Wed 9. Mar 18:45:28 2011
+** Created: Thu 10. Mar 10:13:13 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_TableWidget[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -39,6 +39,8 @@ static const uint qt_meta_data_TableWidget[] = {
      148,   12,   12,   12, 0x0a,
      168,  164,   12,   12, 0x0a,
      218,  209,   12,   12, 0x0a,
+     236,   12,   90,   12, 0x0a,
+     251,   12,   12,   12, 0x0a,
 
        0        // eod
 };
@@ -50,7 +52,8 @@ static const char qt_meta_stringdata_TableWidget[] = {
     "QMap<QString,QString>\0getContacts()\0"
     "clearContacts()\0map\0"
     "insertAllContacts(QMap<QString,QString>)\0"
-    "findText\0showLike(QString)\0"
+    "findText\0showLike(QString)\0getFocusItem()\0"
+    "deleteItem()\0"
 };
 
 const QMetaObject TableWidget::staticMetaObject = {
@@ -93,9 +96,12 @@ int TableWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: clearContacts(); break;
         case 6: insertAllContacts((*reinterpret_cast< QMap<QString,QString>(*)>(_a[1]))); break;
         case 7: showLike((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 8: { int _r = getFocusItem();
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = _r; }  break;
+        case 9: deleteItem(); break;
         default: ;
         }
-        _id -= 8;
+        _id -= 10;
     }
     return _id;
 }

@@ -1,15 +1,15 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'adddialog.h'
+** Meta object code from reading C++ file 'delegatecb.h'
 **
-** Created: Wed 9. Mar 18:50:17 2011
+** Created: Thu 10. Mar 11:11:46 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../adddialog.h"
+#include "../delegatecb.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'adddialog.h' doesn't include <QObject>."
+#error "The header file 'delegatecb.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 62
 #error "This file was generated using the moc from 4.7.0. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -17,7 +17,7 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-static const uint qt_meta_data_AddDialog[] = {
+static const uint qt_meta_data_DelegateCB[] = {
 
  // content:
        5,       // revision
@@ -33,35 +33,35 @@ static const uint qt_meta_data_AddDialog[] = {
        0        // eod
 };
 
-static const char qt_meta_stringdata_AddDialog[] = {
-    "AddDialog\0"
+static const char qt_meta_stringdata_DelegateCB[] = {
+    "DelegateCB\0"
 };
 
-const QMetaObject AddDialog::staticMetaObject = {
-    { &QDialog::staticMetaObject, qt_meta_stringdata_AddDialog,
-      qt_meta_data_AddDialog, 0 }
+const QMetaObject DelegateCB::staticMetaObject = {
+    { &QItemDelegate::staticMetaObject, qt_meta_stringdata_DelegateCB,
+      qt_meta_data_DelegateCB, 0 }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &AddDialog::getStaticMetaObject() { return staticMetaObject; }
+const QMetaObject &DelegateCB::getStaticMetaObject() { return staticMetaObject; }
 #endif //Q_NO_DATA_RELOCATION
 
-const QMetaObject *AddDialog::metaObject() const
+const QMetaObject *DelegateCB::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
-void *AddDialog::qt_metacast(const char *_clname)
+void *DelegateCB::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_AddDialog))
-        return static_cast<void*>(const_cast< AddDialog*>(this));
-    return QDialog::qt_metacast(_clname);
+    if (!strcmp(_clname, qt_meta_stringdata_DelegateCB))
+        return static_cast<void*>(const_cast< DelegateCB*>(this));
+    return QItemDelegate::qt_metacast(_clname);
 }
 
-int AddDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int DelegateCB::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QDialog::qt_metacall(_c, _id, _a);
+    _id = QItemDelegate::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     return _id;

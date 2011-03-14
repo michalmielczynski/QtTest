@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent)
 {
     table = new TableWidget;
+    table->showMaximized();
     setCentralWidget(table);
     // address book actions
     saveAct = new QAction("save",this);
@@ -116,4 +117,8 @@ void MainWindow::addContact(){
 >>>>>>> e3c9a4c7975896dea781b1b20b751894809b1f8f
 
 }
-void MainWindow::editContact(){}/// @todo
+void MainWindow::editContact(){
+
+
+
+}/// @todo
